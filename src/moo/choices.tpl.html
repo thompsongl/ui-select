@@ -1,0 +1,16 @@
+<ul class="ui-select-choices ui-select-choices-content Dropdown-list">
+  <li
+    role="option"
+    id="ui-select-choices-row-{{ $select.generatedId }}-{{$index}}"
+    class="ui-select-choices-row Dropdown-item"
+    ng-class="{
+      'is-selected': !$select.isEmpty() && $select.selected === item,
+      'is-disabled': $select.isDisabled(this)
+    }"
+  >
+    <a
+      class="ui-select-choices-row-inner Dropdown-itemLink"
+      ng-class="{'is-active': $select.isActive(this)}"
+    ></a>
+  </li>
+</ul>

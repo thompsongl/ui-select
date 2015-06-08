@@ -1,0 +1,23 @@
+<div
+  class="ui-select-container Dropdown"
+  ng-class="{
+    'is-open': $select.open,
+    'is-disabled': $select.disabled,
+    'has-focus' : $select.focus,
+    'has-selection': !$select.isEmpty(),
+    'Dropdown--inline': $select.inline
+  }"
+>
+  <div class="ui-select-match"></div>
+  <input type="text" autocomplete="off" tabindex="-1"
+         class="ui-select-search ui-select-toggle u-hiddenVisually"
+         ng-click="$select.toggle($event)"
+         placeholder="{{$select.placeholder}}"
+         ng-model="$select.search"
+         ng-hide="!$select.searchEnabled || ($select.selected && !$select.open)"
+         ng-disabled="$select.disabled"
+         aria-label="{{ $select.baseTitle }}">
+  <div class="ui-select-dropdown Dropdown-listWrap" ng-class="{'is-open': $select.open}">
+    <div class="ui-select-choices"></div>
+  </div>
+</div>

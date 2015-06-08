@@ -1,0 +1,9 @@
+<a class="ui-select-match Dropdown-trigger"
+  ng-class="{'Button Button--outline': !$select.inline}"
+  ng-click="$select.toggle($event)"
+  aria-label="{{ $select.baseTitle }} select"
+>
+  <span ng-show="$select.isEmpty()" class="Dropdown-label">{{$select.placeholder}}</span>
+  <span ng-hide="$select.isEmpty()" class="Dropdown-label" ng-transclude></span>
+  <img class="Dropdown-arrow" src="//cdn.mutualofomaha.com/images/corporate/pixel.png">
+</a>
